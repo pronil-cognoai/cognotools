@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Generator</title>
+<script>
+function generateURL() {
+    var consoleUrl = document.getElementById("consoleUrl").value;
+    var campaignId = document.getElementById("campaignId").value;
+    var url = "https://" + consoleUrl + "/admin/CampaignApp/campaignaudiencelog/?campaign=" + campaignId + "&is_sent=True&is_failed=True";
+    window.open(url, "_blank");
+}
+</script>
+</head>
+<body>
+<p>Find out campaign user for which contradictory delivery packets were received</p>
+<form onsubmit="generateURL(); return false;">
+    <label for="consoleUrl">Console URL (without HTTP):</label>
+    <input type="text" id="consoleUrl" name="consoleUrl" required><br><br>
+    <label for="campaignId">Campaign ID:</label>
+    <input type="text" id="campaignId" name="campaignId" required><br><br>
+    <input type="submit" value="Get details">
+</form>
+
+<!-- Static App Form Collection Script -->
+<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
+
+<script src="https://static.app/js/static.js" type="text/javascript"></script>
+</body>
+</html>

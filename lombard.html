@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Generator</title>
+<script>
+function generateURL() {
+    var meetingId = document.getElementById("meetingId").value;
+    var url = "https://icici-lombard.allincall.in/admin/EasyAssistApp/cobrowsevideoaudittrail/?meeting_recording=/files/" + meetingId + ".webm";
+    window.open(url, "_blank");
+}
+</script>
+</head>
+<body>
+<p>Lombard video recording fetch tool</p>
+<form onsubmit="generateURL(); return false;">
+    <label for="meetingId">Meeting ID:</label>
+    <input type="text" id="meetingId" name="meetingId" required><br><br>
+    <input type="submit" value="Get details">
+</form>
+
+<!-- Static App Form Collection Script -->
+<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
+
+<script src="https://static.app/js/static.js" type="text/javascript"></script>
+</body>
+</html>
